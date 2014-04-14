@@ -784,7 +784,7 @@ if [ ! -e "${prestatsdir}/confound_regress_36EV/${subj}_filtered_func_data_36EV_
 		$DRAMMSDIR/dramms-warp $filtered_func_36ev $coregdir/ep2mni_warp.nii.gz ${prestatsdir}/confound_regress_36EV/${subj}_filtered_func_data_36EV_std.nii.gz
 
 		echo "24ev"
-		$DRAMMSDIR/dramms-warp $filtered_func_36ev $coregdir/ep2mni_warp.nii.gz ${prestatsdir}/confound_regress_24EV/${subj}_filtered_func_data_24EV_std.nii.gz
+		$DRAMMSDIR/dramms-warp $filtered_func_24ev $coregdir/ep2mni_warp.nii.gz ${prestatsdir}/confound_regress_24EV/${subj}_filtered_func_data_24EV_std.nii.gz
 
 		echo "moving example func and mask to standard space"
                 $DRAMMSDIR/dramms-warp $mask $coregdir/ep2mni_warp.nii.gz ${prestatsdir}/${subj}_mask_std.nii.gz
