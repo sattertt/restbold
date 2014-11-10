@@ -566,7 +566,7 @@ if [ ! -e "$prestats_out" ]; then
 	cp $prestats_design $dir/"$subj"_prestats.fsf
         sed -i "s%XINPUT_NIFTIX%$input_nifti%g" $dir/"$subj"_prestats.fsf
 	sed -i "s%XDIRX%$dir%g" $dir/"$subj"_prestats.fsf
-        sed -i s/XNVOLX/$nvol/g $dir/"$subj"_prestats.fsf
+        sed -i "s/XNVOLX/$nvol/g" $dir/"$subj"_prestats.fsf
 	feat $dir/"$subj"_prestats.fsf
 
 	k=0
