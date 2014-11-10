@@ -655,7 +655,7 @@ else
 	echo "ref $t1brain"
 	echo "out $coregdir/${subj}_ep2struct"
 	echo "omat $coregdir/${subj}_ep2struct.mat"
-	flirt -in $example_func_brain -ref $t1brain -dof 6 -out $coregdir/${subj}_ep2struct -omat $coregdir/${subj}_ep2struct.mat -cost $coreg_method -wmseg $t1wm 	 
+	flirt -in $example_func_brain -ref $t1brain -dof 6 -out $coregdir/${subj}_ep2struct -omat $coregdir/${subj}_ep2struct.mat -cost $coreg_method -wmseg $t1wm -searchrx -180 180 -searchry -180 180 -searchrz -180 180
         convert_xfm -omat $coregdir/${subj}_struct2ep.mat -inverse $coregdir/${subj}_ep2struct.mat
 
 	cp $example_func_brain $coregdir  #copy to coregdir for help viewing subject-space rois
